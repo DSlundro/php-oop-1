@@ -56,7 +56,7 @@ $movie2 = new Movie('I, Robot', 'https://www.ilpuntoquotidiano.it/alboscuole/wp-
 
     <div class="container py-5">
         <div class="row">
-            <h2 class="text-center pb-4 display-4 fw-bold">Stampa normale</h2>
+            <h2 class="text-center pb-4 display-4 fw-bold">Movies</h2>
             <div class="col-12 d-flex justify-content-center gap-5">
                 <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?=$movie1->img?>" alt="Card image cap" style="width: 100%; height: 180px;">
