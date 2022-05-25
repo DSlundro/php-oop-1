@@ -14,7 +14,7 @@ class Movie{
     public $lang;
     public $producer;
 
-    function __constructor($_title, $_img, $_year, $_genre, $_lang, $_producer){
+    function __construct($_title, $_img, $_text, $_year, $_genre, $_lang, $_producer){
         $this -> title      = $_title;
         $this -> img        = $_img;
         $this -> text       = $_text;
@@ -23,30 +23,18 @@ class Movie{
         $this -> lang       = $_lang;
         $this -> producer   = $_producer;
     }
+
+    function getTitle(){
+        return $this -> title;
+    }
 };
 
 // MOVIE 1
-$movie1 = new Movie();
-$movie1 -> title    = 'Avatar';
-$movie1 -> img      = 'https://www.artribune.com/wp-content/uploads/2022/03/Avatar-2-20th-century-fox.jpg';
-$movie1 -> text     = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, beatae. Dolor modi nostrum minus debitis.";
-$movie1 -> year     = '2009';
-$movie1 -> genre    = 'Science Fiction';
-$movie1 -> lang     = 'English';
-$movie1 -> producer = 'James Cameron';
-
+$movie1 = new Movie('Avatar', 'https://www.artribune.com/wp-content/uploads/2022/03/Avatar-2-20th-century-fox.jpg', "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, beatae. Dolor modi nostrum minus debitis.", '2009', 'Science Fiction', 'English', 'James Cameron');
 // MOVIE 2
-$movie2 = new Movie();
-$movie2 -> title    = 'I, Robot';
-$movie2 -> img      = 'https://www.ilpuntoquotidiano.it/alboscuole/wp-content/uploads/2019/07/iorobot.jpg';
-$movie2 -> text     = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque officiis eum odio repudiandae, quam sed.";
-$movie2 -> year     = '2004';
-$movie2 -> genre    = 'Science Fiction, Action';
-$movie2 -> lang     = 'English';
-$movie2 -> producer = 'Laurence Mark';
-
-
+$movie2 = new Movie('I, Robot', 'https://www.ilpuntoquotidiano.it/alboscuole/wp-content/uploads/2019/07/iorobot.jpg', "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque officiis eum odio repudiandae, quam sed.", '2004', 'Science Fiction, Action', 'English', 'Laurence Mark');
 // var_dump($movie1, $movie2);
+
 ?>
 
 <!doctype html>
