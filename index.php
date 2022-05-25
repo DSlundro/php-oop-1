@@ -24,9 +24,13 @@ class Movie{
         $this -> producer   = $_producer;
     }
 
-    function getTitle(){
-        return $this -> title;
-    }
+    function getTitle()     {return $this -> title;}
+    function getImg()       {return $this -> img;}
+    function getText()      {return $this -> text;}
+    function getYear()      {return $this -> year;}
+    function getGenre()     {return $this -> genre;}
+    function getLang()      {return $this -> lang;}
+    function getProducer()  {return $this -> producer;}
 };
 
 // MOVIE 1
@@ -49,8 +53,6 @@ $movie2 = new Movie('I, Robot', 'https://www.ilpuntoquotidiano.it/alboscuole/wp-
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' 
     integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
 
-    <!-- Style CSS -->
-    <link rel='stylesheet' href='./assets/css/style.css'>
 </head>
 <body>
 
@@ -95,6 +97,49 @@ $movie2 = new Movie('I, Robot', 'https://www.ilpuntoquotidiano.it/alboscuole/wp-
                             <h6 class="mb-1 pe-2 py-1">Producer:</h6><span><?=$movie2->producer?></span>
                         </div>
                         <p class="card-text py-1"><?=$movie2->text?></p>
+                    </div>
+                </div>
+            </div><hr class="mt-5">
+
+            <h2 class="text-center display-4 fw-bold py-4">Movies - with method</h2>
+            <div class="col-12 d-flex justify-content-center gap-5 pt-5">
+                <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="<?=$movie1->getImg()?>" alt="Card image cap" style="width: 100%; height: 180px;">
+                    <div class="card-body">
+                        <h3 class="card-title"><?=$movie1->getTitle()?></h3>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-1 pe-2 py-1">Year:</h6><span><?=$movie1->getYear()?></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-1 pe-2 py-1">Genre:</h6><span><?=$movie1->getGenre()?></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-1 pe-2 py-1">Language:</h6><span><?=$movie1->getLang()?></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-1 pe-2 py-1">Producer:</h6><span><?=$movie1->getProducer()?></span>
+                        </div>
+                        <p class="card-text py-1"><?=$movie1->getText()?></p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="<?=$movie2->getImg()?>" alt="Card image cap" style="width: 100%; height: 180px;">
+                    <div class="card-body">
+                        <h3 class="card-title"><?=$movie2->getTitle()?></h3>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-1 pe-2 py-1">Year:</h6><span><?=$movie2->getYear()?></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-1 pe-2 py-1">Genre:</h6><span><?=$movie2->getGenre()?></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-1 pe-2 py-1">Language:</h6><span><?=$movie2->getLang()?></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-1 pe-2 py-1">Producer:</h6><span><?=$movie2->getProducer()?></span>
+                        </div>
+                        <p class="card-text py-1"><?=$movie2->getText()?></p>
                     </div>
                 </div>
             </div>
